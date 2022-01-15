@@ -24,7 +24,7 @@ public class ReportUtilImpl implements ReportUtil {
         JFreeChart chart = ChartFactory.createPieChart("Location Type Report", dataset);
 
         try {
-            ChartUtils.saveChartAsJPEG(new File(path + "/pieChart.jpeg"), chart, 300, 300);
+            ChartUtils.saveChartAsJPEG(new File(path + "/pieChart.jpeg"), chart, 600, 500);
         } catch (IOException e) {
             e.printStackTrace();
         }

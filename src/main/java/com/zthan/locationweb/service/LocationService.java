@@ -9,7 +9,7 @@ public interface LocationService {
     Location saveLocation(Location location);
     void updateLocation(Location location);
     void deleteLocation(Location location);
-    Optional<Location> getLocationById(int id);
+    Location getLocationById(int id);
     List<Location> getAllLocation();
 
 }

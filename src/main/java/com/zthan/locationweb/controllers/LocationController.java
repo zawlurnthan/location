@@ -67,7 +67,7 @@ public class LocationController {
 
     @RequestMapping("/showUpdate")
     public String showUpdate(@RequestParam("id") int id, Model model) {
-        Optional<Location> location = service.getLocationById(id);
+        Location location = service.getLocationById(id);
         model.addAttribute("location", location);
         return "updateLocation";
     }

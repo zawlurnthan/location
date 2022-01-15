@@ -35,8 +35,8 @@
                     <td th:text="${location.code}"></td>
                     <td th:text="${location.name}"></td>
                     <td th:text="${location.type}"></td>
-                    <td><a class="btn btn-danger" th:href="@{'deleteLocation?id='+${location.id}}">delete</a>
-                        <a class="btn btn-primary" th:href="@{'showUpdate?id='+${location.id}}">edit</a>
+                    <td><a class="btn btn-danger" th:href="@{'/deleteLocation?id='+${location.id}}">delete</a>
+                        <a class="btn btn-primary" th:href="@{'/showUpdate?id='+${location.id}}">edit</a>
                     </td>
                 </tr>
             </tbody>
