@@ -17,17 +17,18 @@
         </div>
     </nav>
 
-    <form class="container w-25" th:action="@{/updateLoc}" method="post">
-        <pre>
-            <input class="form-control" name="id" th:value="${location.id}" type="text"/>
-            <input class="form-control" type="text" name="code" th:value="${location.code}" />
-            <input class="form-control" type="text" name="name" th:value="${location.name}" />
+    <div class="container w-25">
+        <h3 class="pt-5 pb-3">Updating Location</h3>
+        <form th:action="@{/updateLoc}" method="post">
+            <input class="form-control my-3" name="id" th:value="${location.id}" type="text"/>
+            <input class="form-control my-3" type="text" name="code" th:value="${location.code}" />
+            <input class="form-control my-3" type="text" name="name" th:value="${location.name}" />
             <input type="radio" name="type" value="URBAN" th:field="*{location.type}" />
-           <label>Urban</label>
+            <label>Urban</label>
             <input type="radio" name="type" value="RURAL" th:field="*{location.type}" />
-            <label>Rural</label>
-            <input class="btn btn-primary" type="submit" value="save" />
-        </pre>
-    </form >
+            <label>Rural</label><br>
+            <input class="btn btn-primary my-3" type="submit" value="save" />
+        </form >
+    </div>
 </body>
 </html>

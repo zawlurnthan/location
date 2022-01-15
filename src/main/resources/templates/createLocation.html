@@ -17,18 +17,19 @@
         </div>
     </nav>
 
-    <form class="container w-25" th:action="@{/saveLoc}" method="post">
-        <pre>
-            <input class="form-control" placeholder="ID" type="text" name="id" />
-            <input class="form-control" placeholder="Code" type="text" name="code" />
-            <input class="form-control" placeholder="Name" type="text" name="name" />
+    <div class="container w-25">
+        <h3 class="pt-5 pb-3">Create New Location</h3>
+        <form th:action="@{/saveLoc}" method="post">
+            <input class="form-control my-3" placeholder="ID" type="text" name="id" />
+            <input class="form-control my-3" placeholder="Code" type="text" name="code" />
+            <input class="form-control my-3" placeholder="Name" type="text" name="name" />
             <input type="radio" name="type" value="URBAN" />
             <label>Urban</label>
             <input type="radio" name="type" value="RURAL" />
-            <label>Rural</label>
-            <input class="btn btn-primary" type="submit" value="save" />
-        </pre>
-    </form >
-    <h3 th:text="${msg}"></h3>
+            <label>Rural</label><br>
+            <input class="btn btn-primary my-3" type="submit" value="save" />
+        </form >
+        <h3 th:text="${msg}"></h3>
+    </div>
 </body>
 </html>
